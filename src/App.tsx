@@ -119,12 +119,12 @@ const App = () => {
         case "not":
           if (projectTypes.includes(queryValue)) {
             setFilteredDataSource((prev) =>
-              prev.filter((item) => item.type?.toLowerCase() === queryValue)
+              prev.filter((item) => item.type?.toLowerCase() !== queryValue)
             );
           }
           if (projectStatus.includes(queryValue)) {
             setFilteredDataSource((prev) =>
-              prev.filter((item) => item.status?.toLowerCase() === queryValue)
+              prev.filter((item) => item.status?.toLowerCase() !== queryValue)
             );
           }
           if (queryValue.includes("archived")) {
